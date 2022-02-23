@@ -40,13 +40,15 @@ namespace CarLotSimulator
             tannerCar.MakeHonkNoise(tannerCar.HonkNoise);
             anthonyCar.MakeHonkNoise(anthonyCar.HonkNoise);
             oldCar.MakeHonkNoise(oldCar.HonkNoise);
-           
 
+            CarLot._numberOfCars = 0;
             foreach(var car in lot.Cars)
             {
                 Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model {car.Model}");
+                CarLot._numberOfCars += 1;
             }
-            
+
+            Console.WriteLine($"Number of Cars: {CarLot._numberOfCars}");
         }
     }
 }
